@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mario Run by ~Shaurya~</title>
+    <link rel="shortcut icon" href="player.gif" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div id="homeScreen">
+      <div id="title"><h1>Mario Run by ~Shaurya~</h1></div>
+      <div id="startBtn"><i class="fas fa-play"></i></div>
+    </div>
+    <div id="gameContainer">
+      <div id="scoreContainer">Score: 0</div>
+      <div id="gameOver">
+        Game Over - Press <kbd>ctrl</kbd> + <kbd>r</kbd> to Restart. <br /><br />
+        Your score is
+      </div>
+      <div id="player" class=""></div>
+      <div id="obstacle" class="rock "></div>
+    </div>
+    <!-- <script>
+      score = 0;
+      player = document.getElementById("player");
+      document.onkeydown = function (e) {
+        console.log("KeyCode is: ", e.keyCode);
+        if (e.keyCode === 38) {
+          player = document.getElementById("player");
+          playerY = parseInt(
+            window.getComputedStyle(player, null).getPropertyValue("bottom")
+          );
+          player.style.bottom = playerY + 300 + "px";
+          setTimeout(() => {
+            player.style.bottom = "0px";
+          }, 300);
+        }
+        if (e.keyCode === 32) {
+          player = document.getElementById("player");
+          playerY = parseInt(
+            window.getComputedStyle(player, null).getPropertyValue("bottom")
+            );
+          player.style.bottom = playerY + 300 + "px";
+          setTimeout(() => {
+            player.style.bottom = "0px";
+          }, 300);
+        }
+        if (e.keyCode === 39) {
+          player = document.getElementById("player");
+          playerX = parseInt(
+            window.getComputedStyle(player, null).getPropertyValue("left")
+            );
+          player.style.left = playerX + 150 + "px";
+          player.style.transform = "scaleX(" + 1 + ")";
+        }
+        if (e.keyCode === 37) {
+          player = document.getElementById("player");
+          playerX = parseInt(
+            window.getComputedStyle(player, null).getPropertyValue("left")
+            );
+          player.style.left = playerX - 150 + "px";
+          player.style.transform = "scaleX(" + -1 + ")";
+        }
+      };
+      setInterval(() => {
+        player = document.getElementById("player");
+        gameOver = document.getElementById("gameOver");
+        obstacle = document.getElementById("obstacle");
+        gameContainer = document.getElementById("gameContainer");
+        
+        px = parseInt(
+          window.getComputedStyle(player, null).getPropertyValue("left")
+        );
+        py = parseInt(
+          window.getComputedStyle(player, null).getPropertyValue("top")
+          );
+
+        ox = parseInt(
+          window.getComputedStyle(obstacle, null).getPropertyValue("left")
+        );
+        oy = parseInt(
+          window.getComputedStyle(obstacle, null).getPropertyValue("top")
+        );
+
+        offsetX = Math.abs(px - ox);
+        offsetY = Math.abs(py - oy);
+        console.log(offsetX, offsetY);
+
+        if (offsetX < 123 && offsetY < 100) {
+          gameOver.style.visibility = "visible";
+          gameOver.innerHTML =
+            "Game Over - Press <kbd>ctrl</kbd> + <kbd>r</kbd> to Restart. <br>Your score is" +
+            score;
+          obstacle.classList.remove("obstacleAni");
+          gameContainer.style.background =
+            "linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../bg.png)";
+          player.classList.add("die");
+        } else {
+          score += 1;
+          updateScore(score);
+        }
+      }, 100);
+      function updateScore(score) {
+        var scoreContainer = document.getElementById("scoreContainer");
+        scoreContainer.innerHTML = "Score: " + score;
+      } -->
+    <!-- </script> -->
+    
+    <script src="script.js"></script> 
+  </body>
+</html>
