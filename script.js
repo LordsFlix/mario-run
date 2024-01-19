@@ -14,6 +14,19 @@ start.addEventListener('click', () => {
     }, 1000);
 });
 
+var howToPlay = document.getElementById('howToPlay');
+var hTp = document.getElementById('hTp');
+var closeBtn = document.getElementById('close');
+
+howToPlay.addEventListener('click', () => {
+    hTp.style.scale = '1';
+    hTp.style.opacity = '1';
+});
+
+closeBtn.addEventListener('click', ()=> {
+    hTp.style.scale = '0';
+    hTp.style.opacity = '0';
+})
 
 
 
