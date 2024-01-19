@@ -13,7 +13,14 @@
   <body>
     <div id="homeScreen">
       <div id="title"><h1>Mario Run by ~Shaurya~</h1></div>
-      <div id="startBtn"><i class="fas fa-play"></i></div>
+      <div id="homeBtn">
+        <div id="startBtn">
+          <i class="fas fa-play"></i>
+        </div>
+        <div id="howToPlay">
+          <i class="fas fa-question"></i>
+        </div>
+      </div>
     </div>
     <div id="gameContainer">
       <div id="scoreContainer">Score: 0</div>
@@ -24,92 +31,17 @@
       <div id="player" class=""></div>
       <div id="obstacle" class="rock "></div>
     </div>
-    <!-- <script>
-      score = 0;
-      player = document.getElementById("player");
-      document.onkeydown = function (e) {
-        console.log("KeyCode is: ", e.keyCode);
-        if (e.keyCode === 38) {
-          player = document.getElementById("player");
-          playerY = parseInt(
-            window.getComputedStyle(player, null).getPropertyValue("bottom")
-          );
-          player.style.bottom = playerY + 300 + "px";
-          setTimeout(() => {
-            player.style.bottom = "0px";
-          }, 300);
-        }
-        if (e.keyCode === 32) {
-          player = document.getElementById("player");
-          playerY = parseInt(
-            window.getComputedStyle(player, null).getPropertyValue("bottom")
-            );
-          player.style.bottom = playerY + 300 + "px";
-          setTimeout(() => {
-            player.style.bottom = "0px";
-          }, 300);
-        }
-        if (e.keyCode === 39) {
-          player = document.getElementById("player");
-          playerX = parseInt(
-            window.getComputedStyle(player, null).getPropertyValue("left")
-            );
-          player.style.left = playerX + 150 + "px";
-          player.style.transform = "scaleX(" + 1 + ")";
-        }
-        if (e.keyCode === 37) {
-          player = document.getElementById("player");
-          playerX = parseInt(
-            window.getComputedStyle(player, null).getPropertyValue("left")
-            );
-          player.style.left = playerX - 150 + "px";
-          player.style.transform = "scaleX(" + -1 + ")";
-        }
-      };
-      setInterval(() => {
-        player = document.getElementById("player");
-        gameOver = document.getElementById("gameOver");
-        obstacle = document.getElementById("obstacle");
-        gameContainer = document.getElementById("gameContainer");
-        
-        px = parseInt(
-          window.getComputedStyle(player, null).getPropertyValue("left")
-        );
-        py = parseInt(
-          window.getComputedStyle(player, null).getPropertyValue("top")
-          );
-
-        ox = parseInt(
-          window.getComputedStyle(obstacle, null).getPropertyValue("left")
-        );
-        oy = parseInt(
-          window.getComputedStyle(obstacle, null).getPropertyValue("top")
-        );
-
-        offsetX = Math.abs(px - ox);
-        offsetY = Math.abs(py - oy);
-        console.log(offsetX, offsetY);
-
-        if (offsetX < 123 && offsetY < 100) {
-          gameOver.style.visibility = "visible";
-          gameOver.innerHTML =
-            "Game Over - Press <kbd>ctrl</kbd> + <kbd>r</kbd> to Restart. <br>Your score is" +
-            score;
-          obstacle.classList.remove("obstacleAni");
-          gameContainer.style.background =
-            "linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(../bg.png)";
-          player.classList.add("die");
-        } else {
-          score += 1;
-          updateScore(score);
-        }
-      }, 100);
-      function updateScore(score) {
-        var scoreContainer = document.getElementById("scoreContainer");
-        scoreContainer.innerHTML = "Score: " + score;
-      } -->
-    <!-- </script> -->
-    
+    <div id="hTp">
+      <i class="fas fa-xmark" id="close"></i>
+      <h2>How To Play</h2>
+      <ul>
+        <li>Click Play button to start the Game.</li>
+        <li>Press <kbd><i class="fas fa-arrow-right"></i></kbd> key to move the charcter forward.</li>
+        <li>Press <kbd><i class="fas fa-arrow-left"></i></kbd> key to move the charcter backward.</li>
+        <li>Press <kbd><i class="fas fa-arrow-up"></i></kbd> or <kbd>Space</kbd> key to make the character jump.</li>
+        <li>On Game Over Refresh the page or Press <kbd>ctrl</kbd> + <kbd>r</kbd> to restart the game.</li>
+      </ul>
+    </div>  
     <script src="script.js"></script> 
   </body>
 </html>
